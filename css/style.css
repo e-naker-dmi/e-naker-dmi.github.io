@@ -61,10 +61,11 @@ a {
 .card-container {
   margin-top: 50px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-wrap: wrap;
   gap: 20px;
   padding: 20px;
+  perspective: 1500px; /* Menambahkan perspektif 3D */
 }
 
 .card {
@@ -77,15 +78,16 @@ a {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
   color: white;
+  transform-style: preserve-3d; /* Menjaga efek 3D pada card */
 }
 
+/* Efek Hover dengan 3D */
 .card:hover {
-  transform: scale(1.05); /* Membesar sedikit */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Efek bayangan lebih tajam */
+  transform: rotateY(15deg) scale(1.05); /* Rotasi dan sedikit pembesaran */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Efek bayangan lebih tajam */
   background-color: #4CAF50; /* Warna berubah saat hover */
 }
 
-/* Efek warna-warni di setiap card */
 .card:nth-child(1) {
   background-color: #FF5733; /* Merah */
 }
