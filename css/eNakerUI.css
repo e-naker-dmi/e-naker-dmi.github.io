@@ -1,7 +1,22 @@
-/* eNakerUI.css */
+/* Menggunakan font Roboto secara global */
+@font-face {
+  font-family: 'Roboto';
+  src: url('../fonts/Roboto-VariableFont_wdth,wght.ttf') format('truetype');
+  font-weight: 100 900; /* Menyesuaikan dengan variasi berat font */
+  font-style: normal;
+}
 
-/* Header dan Footer Konsisten */
+/* Terapkan font Roboto ke seluruh body aplikasi */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Gaya untuk header dan footer */
 header, footer {
+  font-family: 'Roboto', sans-serif;
   background-color: #28a745;
   color: white;
   text-align: center;
@@ -12,7 +27,12 @@ footer p {
   margin: 0;
 }
 
-/* Desain Card dengan efek hover */
+/* Gaya untuk heading */
+h1, h2, h3 {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Gaya untuk card */
 .card {
   background-color: #fff;
   border-radius: 8px;
@@ -36,6 +56,10 @@ footer p {
 .card h3 {
   font-size: 1.25rem;
   margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 1rem;
 }
 
 .card a {
