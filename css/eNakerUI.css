@@ -38,8 +38,9 @@ body {
     flex-wrap: wrap;
 }
 
-/* Card Styling with Gradient */
+/* Link Styling for Cards */
 .card {
+    text-decoration: none; /* Menghilangkan garis bawah pada link */
     background: linear-gradient(135deg, #003366, #28a745, #ffc107); /* Gradien untuk card: biru tua ke hijau dan kuning */
     width: 220px;
     height: 300px;
@@ -48,6 +49,7 @@ body {
     padding: 20px;
     text-align: center;
     transition: transform 0.3s ease, background-color 0.3s ease;
+    color: white; /* Warna teks putih */
 }
 
 .card img {
