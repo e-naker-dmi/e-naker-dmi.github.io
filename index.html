@@ -4,22 +4,26 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>e-NAKER-DMI</title>
-  <link rel="stylesheet" href="css/eNakerUI.css"> <!-- Hanya mengimpor eNakerUI.css -->
+  <link rel="stylesheet" href="css/eNakerUI.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
 
-  <!-- Splash Screen -->
-  <div id="splash" class="splash">
-    <h2 style="color:white; font-size: 2em;">e-NAKER-DMI</h2>
-  </div>
+  <header>
+    <h1>e-NAKER-DMI</h1>
+  </header>
 
-  <!-- Card Container (Landing Page) -->
+  <nav>
+    <button class="home-btn">
+      <i class="fa fa-home"></i> Home
+    </button>
+  </nav>
+
   <div class="card-container">
     <div class="card">
       <img src="assets/icon-pencari-kerja.png" alt="Pencari Kerja">
       <h3>Pencari Kerja</h3>
       <p>Daftar untuk Kartu Kuning Digital, buat profil dan CV.</p>
-      <!-- Perbaikan path menuju pencari-kerja/index.html -->
       <a href="modules/pencari-kerja/index.html">Masuk</a>
     </div>
     <div class="card">
@@ -39,12 +43,10 @@
     </div>
   </div>
 
-  <!-- Footer -->
   <footer>
     <p>e-Naker Dumai – Digitalisasi Tenaga Kerja Kota Idaman</p>
   </footer>
 
   <script src="js/main.js"></script>
-
 </body>
 </html>
