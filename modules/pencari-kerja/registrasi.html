@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registrasi Kartu Kuning Digital</title>
     <style>
-        /* Kode CSS untuk memperbaiki tata letak */
+        /* Kode CSS untuk memperbaiki tata letak dengan gradient background */
         form {
             display: flex;
             flex-direction: column;
@@ -13,7 +13,7 @@
             max-width: 800px; /* Membatasi lebar form */
             margin: 0 auto; /* Agar form berada di tengah halaman */
             padding: 20px;
-            background-color: #f4f4f4; /* Warna latar belakang form */
+            background: linear-gradient(to right, #28a745, #155724); /* Gradient sesuai dengan desain */
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
@@ -78,43 +78,42 @@
 
     <div class="container">
         <!-- Form untuk mengirim data ke Google Form -->
-        <form action="https://docs.google.com/forms/d/e/1FAIpQLSfwCuEBdTLLDglRJUu-CNaDYTNZfqHmu4SG_AnHCsZ7XNzUCA/formResponse" method="POST">
-            
+        <form id="registrasiForm">
             <label for="name">Nama Lengkap</label>
-            <input type="text" id="name" name="entry.118212613" required> <!-- Entry ID untuk Nama Lengkap -->
+            <input type="text" id="name" name="name" required>
 
             <label for="nik">Nomor Induk Kependudukan (NIK)</label>
-            <input type="text" id="nik" name="entry.939342942" required> <!-- Entry ID untuk NIK -->
+            <input type="text" id="nik" name="nik" required>
 
             <label for="place_of_birth">Tempat Lahir</label>
-            <input type="text" id="place_of_birth" name="entry.1574497722" required> <!-- Entry ID untuk Tempat Lahir -->
+            <input type="text" id="place_of_birth" name="place_of_birth" required>
 
             <label for="date_of_birth">Tanggal Lahir</label>
-            <input type="date" id="date_of_birth" name="entry.3182766" required> <!-- Entry ID untuk Tanggal Lahir -->
+            <input type="date" id="date_of_birth" name="date_of_birth" required>
 
             <label for="address">Alamat Lengkap</label>
-            <textarea id="address" name="entry.1201824858" required></textarea> <!-- Entry ID untuk Alamat -->
+            <textarea id="address" name="address" required></textarea>
 
             <label for="phone">Nomor Telepon</label>
-            <input type="tel" id="phone" name="entry.1165840749" required> <!-- Entry ID untuk Nomor Telepon -->
+            <input type="tel" id="phone" name="phone" required>
 
             <label for="email">Email</label>
-            <input type="email" id="email" name="entry.308168539" required> <!-- Entry ID untuk Email -->
+            <input type="email" id="email" name="email" required>
 
             <label for="gender">Jenis Kelamin</label>
-            <select id="gender" name="entry.1310705833" required> <!-- Entry ID untuk Jenis Kelamin -->
+            <select id="gender" name="gender" required>
                 <option value="Laki-laki">Laki-laki</option>
                 <option value="Perempuan">Perempuan</option>
             </select>
 
             <label for="marital_status">Status Pernikahan</label>
-            <select id="marital_status" name="entry.1719827740" required> <!-- Entry ID untuk Status Pernikahan -->
+            <select id="marital_status" name="marital_status" required>
                 <option value="Belum Menikah">Belum Menikah</option>
                 <option value="Menikah">Menikah</option>
             </select>
 
             <label for="education">Pendidikan Terakhir</label>
-            <select id="education" name="entry.157694409" required> <!-- Entry ID untuk Pendidikan -->
+            <select id="education" name="education" required>
                 <option value="SD">SD/Sederajat</option>
                 <option value="SMP">SMP/Sederajat</option>
                 <option value="SMA/MA/SMK Sederajat">SMA/MA/SMK Sederajat</option>
@@ -123,27 +122,6 @@
                 <option value="S2">S2</option>
                 <option value="S3">S3</option>
             </select>
-
-            <label for="skills">Keterampilan</label>
-            <input type="text" id="skills" name="entry.2143652483" required> <!-- Entry ID untuk Keterampilan -->
-
-            <label for="work_experience">Pengalaman Kerja</label>
-            <textarea id="work_experience" name="entry.1515682175_year"></textarea> <!-- Entry ID untuk Pengalaman Kerja -->
-
-            <label for="health_status">Status Kesehatan</label>
-            <input type="text" id="health_status" name="entry.333884239"> <!-- Entry ID untuk Status Kesehatan -->
-
-            <label for="references">Referensi</label>
-            <input type="text" id="references" name="entry.880719833"> <!-- Entry ID untuk Referensi -->
-
-            <label for="job_preferences">Pilihan Pekerjaan</label>
-            <input type="text" id="job_preferences" name="entry.1515682175_month"> <!-- Entry ID untuk Pilihan Pekerjaan -->
-
-            <label for="photo">Foto Profil (Opsional)</label>
-            <input type="file" id="photo" name="entry.157694409"> <!-- Entry ID untuk Foto Profil (Opsional) -->
-
-            <label for="agreement">Saya menyetujui syarat dan ketentuan</label>
-            <input type="checkbox" id="agreement" name="entry.1476284812_sentinel" required> <!-- Entry ID untuk Persetujuan -->
 
             <button type="submit">Daftar</button>
         </form>
@@ -154,6 +132,29 @@
         <a href="../../index.html">Home</a>
     </footer>
 
-    <script src="../../js/pencari-kerja.js"></script>
+    <script>
+        // JavaScript untuk meng-handle form submit dan redirect ke Google Form
+        document.getElementById('registrasiForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Mencegah form dikirim secara default
+
+            // Ambil data dari form
+            const name = document.getElementById('name').value;
+            const nik = document.getElementById('nik').value;
+            const placeOfBirth = document.getElementById('place_of_birth').value;
+            const dateOfBirth = document.getElementById('date_of_birth').value;
+            const address = document.getElementById('address').value;
+            const phone = document.getElementById('phone').value;
+            const email = document.getElementById('email').value;
+            const gender = document.getElementById('gender').value;
+            const maritalStatus = document.getElementById('marital_status').value;
+            const education = document.getElementById('education').value;
+
+            // Membuat URL untuk mengirim data ke Google Form
+            const googleFormURL = `https://docs.google.com/forms/d/e/1FAIpQLSfwCuEBdTLLDglRJUu-CNaDYTNZfqHmu4SG_AnHCsZ7XNzUCA/formResponse?entry.118212613=${encodeURIComponent(name)}&entry.939342942=${encodeURIComponent(nik)}&entry.1574497722=${encodeURIComponent(placeOfBirth)}&entry.3182766=${encodeURIComponent(dateOfBirth)}&entry.1201824858=${encodeURIComponent(address)}&entry.1165840749=${encodeURIComponent(phone)}&entry.308168539=${encodeURIComponent(email)}&entry.1310705833=${encodeURIComponent(gender)}&entry.1719827740=${encodeURIComponent(maritalStatus)}&entry.157694409=${encodeURIComponent(education)}`;
+
+            // Redirect ke Google Form dengan data yang sudah diisi
+            window.location.href = googleFormURL;
+        });
+    </script>
 </body>
 </html>
