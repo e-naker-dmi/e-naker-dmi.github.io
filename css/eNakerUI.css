@@ -1,0 +1,59 @@
+/* eNakerUI.css */
+
+/* Header dan Footer Konsisten */
+header, footer {
+  background-color: #28a745;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* Desain Card dengan efek hover */
+.card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 15px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  background-color: #f8f9fa;
+}
+
+.card img {
+  max-width: 50px;
+  margin-bottom: 15px;
+}
+
+.card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+}
+
+.card a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.card a:hover {
+  text-decoration: underline;
+}
+
+/* Bottom Navbar */
+nav {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #007bff;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+}
