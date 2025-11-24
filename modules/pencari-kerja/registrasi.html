@@ -11,22 +11,84 @@
         <h1>Registrasi Kartu Kuning Digital</h1>
     </header>
 
-    <nav>
-        <a href="index.html">Kembali</a>
+    <nav class="breadcrumb">
+        <a href="../../index.html">Home</a> > <a href="index.html">Pencari Kerja</a> > Registrasi Kartu Kuning
     </nav>
 
     <div class="container">
         <form id="registrasi-form">
             <label for="name">Nama Lengkap</label>
             <input type="text" id="name" name="name" required>
+
+            <label for="nik">Nomor Induk Kependudukan (NIK)</label>
+            <input type="text" id="nik" name="nik" required>
+
+            <label for="place_of_birth">Tempat Lahir</label>
+            <input type="text" id="place_of_birth" name="place_of_birth" required>
+
+            <label for="date_of_birth">Tanggal Lahir</label>
+            <input type="date" id="date_of_birth" name="date_of_birth" required>
+
+            <label for="address">Alamat Lengkap</label>
+            <textarea id="address" name="address" required></textarea>
+
+            <label for="phone">Nomor Telepon</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="gender">Jenis Kelamin</label>
+            <select id="gender" name="gender" required>
+                <option value="Laki-laki">Laki-laki</option>
+                <option value="Perempuan">Perempuan</option>
+            </select>
+
+            <label for="marital_status">Status Pernikahan</label>
+            <select id="marital_status" name="marital_status" required>
+                <option value="Belum Menikah">Belum Menikah</option>
+                <option value="Menikah">Menikah</option>
+            </select>
+
+            <label for="education">Pendidikan Terakhir</label>
+            <select id="education" name="education" required>
+                <option value="SD">SD/Sederajat</option>
+                <option value="SMP">SMP/Sederajat</option>
+                <option value="SMA/MA/SMK Sederajat">SMA/MA/SMK Sederajat</option>
+                <option value="D3">D3</option>
+                <option value="DIV/S1">DIV/S1</option>
+                <option value="S2">S2</option>
+                <option value="S3">S3</option>
+            </select>
+
             <label for="skills">Keterampilan</label>
             <input type="text" id="skills" name="skills" required>
+
+            <label for="work_experience">Pengalaman Kerja</label>
+            <textarea id="work_experience" name="work_experience"></textarea>
+
+            <label for="health_status">Status Kesehatan</label>
+            <input type="text" id="health_status" name="health_status">
+
+            <label for="references">Referensi</label>
+            <input type="text" id="references" name="references">
+
+            <label for="job_preferences">Pilihan Pekerjaan</label>
+            <input type="text" id="job_preferences" name="job_preferences">
+
+            <label for="photo">Foto Profil (Opsional)</label>
+            <input type="file" id="photo" name="photo" accept="image/*">
+
+            <label for="agreement">Saya menyetujui syarat dan ketentuan</label>
+            <input type="checkbox" id="agreement" name="agreement" required>
+
             <button type="submit">Daftar</button>
         </form>
     </div>
 
     <footer>
         <p>e-Naker Dumai – Digitalisasi Tenaga Kerja Kota Idaman</p>
+        <a href="../../index.html">Home</a>
     </footer>
 
     <script src="../../js/pencari-kerja.js"></script>
