@@ -12,58 +12,99 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  background-color: #f4f6f9; /* Latar belakang netral agar lebih nyaman */
+  color: #333; /* Teks yang mudah dibaca */
 }
 
-/* Gaya untuk header dan footer */
+/* Header dan footer */
 header, footer {
   font-family: 'Roboto', sans-serif;
-  background-color: #28a745;
+  background-color: #2d3e50; /* Warna soft untuk header/footer */
   color: white;
   text-align: center;
-  padding: 10px;
+  padding: 20px;
 }
 
-footer p {
-  margin: 0;
-}
-
-/* Gaya untuk heading */
+/* Gaya untuk heading dan judul */
 h1, h2, h3 {
   font-family: 'Roboto', sans-serif;
+  font-weight: 700; /* Bold untuk header */
+  color: #333;
+  margin-bottom: 20px;
 }
 
-/* Gaya untuk card */
+/* Gaya untuk form dan input */
+form label {
+  font-weight: 500; /* Medium weight untuk label */
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+}
+
+input, textarea, select {
+  font-family: 'Roboto', sans-serif;
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+input[type="submit"], button {
+  background-color: #007bff;
+  color: white;
+  font-size: 1.1em;
+  padding: 12px 25px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+input[type="submit"]:hover, button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05); /* Efek hover lebih halus */
+}
+
+/* Kartu dengan desain lebih modern dan interaktif */
 .card {
   background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin: 15px;
-  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  margin: 20px;
   text-align: center;
-  transition: transform 0.3s ease, background-color 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 350px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .card:hover {
   transform: translateY(-10px);
-  background-color: #f8f9fa;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
 }
 
 .card img {
-  max-width: 50px;
-  margin-bottom: 15px;
+  max-width: 60px;
+  margin-bottom: 20px;
 }
 
 .card h3 {
-  font-size: 1.25rem;
-  margin-bottom: 10px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 15px;
 }
 
 .card p {
-  font-size: 1rem;
+  font-size: 1.1rem;
+  margin-bottom: 20px;
 }
 
 .card a {
   color: #007bff;
+  font-size: 1.1em;
+  font-weight: 500;
   text-decoration: none;
 }
 
@@ -71,13 +112,32 @@ h1, h2, h3 {
   text-decoration: underline;
 }
 
-/* Bottom Navbar */
+/* Navbar bawah */
 nav {
   position: fixed;
   bottom: 0;
   width: 100%;
-  background-color: #007bff;
+  background-color: #1a2930;
   color: white;
   text-align: center;
-  padding: 10px 0;
+  padding: 15px 0;
+  font-size: 1.1em;
+}
+
+/* Responsif untuk tampilan mobile */
+@media (max-width: 768px) {
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .card {
+    width: 90%;
+    margin: 10px;
+  }
+
+  header, footer {
+    padding: 15px 10px;
+  }
 }
