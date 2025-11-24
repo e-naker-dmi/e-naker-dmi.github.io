@@ -124,6 +124,32 @@ nav {
   font-size: 1.1em;
 }
 
+/* Tombol Home dengan ikon */
+.home-btn {
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 12px 25px;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px; /* Spasi antara ikon dan teks */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.home-btn i {
+  font-size: 1.3rem; /* Ukuran ikon */
+}
+
+.home-btn:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
 /* Responsif untuk tampilan mobile */
 @media (max-width: 768px) {
   .card-container {
@@ -133,7 +159,7 @@ nav {
   }
   
   .card {
-    width: 90%;
+    width: 90%; /* Lebar card lebih kecil di perangkat mobile */
     margin: 10px;
   }
 
