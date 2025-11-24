@@ -7,34 +7,38 @@
   <title>Input Lowongan</title>
 </head>
 <body>
-  <header>
-    <h1>Input Lowongan Kerja</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Kembali ke Modul</a></li>
-      </ul>
-    </nav>
+  <header class="header">
+    <div class="container">
+      <h1>Input Lowongan Kerja</h1>
+      <nav>
+        <ul class="nav">
+          <li><a href="index.html">Kembali ke Modul</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <main>
-    <form id="form-lowongan" class="form-container">
-      <label for="nama-perusahaan">Nama Perusahaan:</label>
-      <input type="text" id="nama-perusahaan" class="input-field" required>
+  <main class="main-content">
+    <div class="container">
+      <form id="form-lowongan" class="form">
+        <label for="nama-perusahaan">Nama Perusahaan:</label>
+        <input type="text" id="nama-perusahaan" class="input" required>
 
-      <label for="posisi">Posisi:</label>
-      <input type="text" id="posisi" class="input-field" required>
+        <label for="posisi">Posisi:</label>
+        <input type="text" id="posisi" class="input" required>
 
-      <label for="deskripsi">Deskripsi Lowongan:</label>
-      <textarea id="deskripsi" class="input-field" required></textarea>
+        <label for="deskripsi">Deskripsi Lowongan:</label>
+        <textarea id="deskripsi" class="textarea" required></textarea>
 
-      <label for="tanggal-berakhir">Tanggal Berakhir:</label>
-      <input type="date" id="tanggal-berakhir" class="input-field" required>
+        <label for="tanggal-berakhir">Tanggal Berakhir:</label>
+        <input type="date" id="tanggal-berakhir" class="input" required>
 
-      <button type="submit" class="btn-submit">Tambahkan Lowongan</button>
-    </form>
+        <button type="submit" class="btn btn-primary">Tambahkan Lowongan</button>
+      </form>
+    </div>
   </main>
 
-  <footer>
+  <footer class="footer">
     <p>&copy; 2025 e-NAKER Dumai</p>
   </footer>
 
