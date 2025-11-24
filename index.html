@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>e-NAKER-DMI</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Menambahkan font Roboto dari folder /fonts/ */
+    @font-face {
+      font-family: 'Roboto';
+      src: url('fonts/Roboto-VariableFont_wdth,wght.ttf') format('truetype');
+      font-weight: 100 900;
+      font-display: swap;
+    }
+
+    /* Splashing effect */
+    .splash {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #4CAF50; /* Warna latar belakang splash */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+      opacity: 1;
+      transition: opacity 0.3s ease-out;
+    }
+
+    .splash.fade {
+      opacity: 0;
+    }
+
+    /* Style untuk Navbar */
+    .navbar {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background-color: #333;
+      padding: 10px 0;
+      text-align: center;
+    }
+
+    .navbar ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .navbar ul li {
+      display: inline;
+      margin: 0 20px;
+    }
+
+    .navbar ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+    }
+
+    /* Style untuk Card */
+    .card-container {
+      margin-top: 50px;
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      background-color: #fff;
+      border-radius: 10px;
+      width: 250px;
+      margin: 20px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    .card img {
+      width: 60px;
+      height: 60px;
+      margin-bottom: 15px;
+    }
+
+    .card h3 {
+      font-size: 18px;
+      margin: 10px 0;
+    }
+
+    .card p {
+      font-size: 14px;
+      color: #555;
+    }
+
+    /* Menggunakan font Roboto di seluruh aplikasi */
+    body, html {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Splash Screen -->
+  <div id="splash" class="splash">
+    <h2 style="color:white; font-size: 2em;">e-NAKER-DMI</h2>
+  </div>
+
+  <!-- Card Container (Landing Page) -->
+  <div class="card-container">
+    <div class="card">
+      <img src="assets/icon-pencari-kerja.svg" alt="Pencari Kerja">
+      <h3>Pencari Kerja</h3>
+      <p>Daftar untuk Kartu Kuning Digital, buat profil dan CV.</p>
+      <a href="modules/pencari-kerja.html">Masuk</a>
+    </div>
+    <div class="card">
+      <img src="assets/icon-lowongan-kerja.svg" alt="Lowongan Kerja">
+      <h3>Lowongan Kerja</h3>
+      <p>Cari lowongan kerja terbaru yang sesuai dengan keterampilanmu.</p>
+    </div>
+    <div class="card">
+      <img src="assets/icon-pelatihan.svg" alt="Pelatihan Tenaga Kerja">
+      <h3>Pelatihan Tenaga Kerja</h3>
+      <p>Ikuti pelatihan untuk meningkatkan keterampilan kerja.</p>
+    </div>
+    <div class="card">
+      <img src="assets/icon-dashboard.svg" alt="Dashboard Pemerintah">
+      <h3>Dashboard Admin</h3>
+      <p>Kelola data dan laporan terkait tenaga kerja.</p>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <ul>
+      <li><a href="modules/pencari-kerja.html">Pencari Kerja</a></li>
+      <li><a href="modules/lowongan-kerja.html">Lowongan Kerja</a></li>
+      <li><a href="modules/pelatihan.html">Pelatihan</a></li>
+      <li><a href="modules/dashboard.html">Dashboard Admin</a></li>
+    </ul>
+  </div>
+
+  <script>
+    // Splash effect timeout
+    window.onload = function() {
+      setTimeout(function() {
+        document.getElementById('splash').classList.add('fade');
+      }, 300); // Durasi 0.3 detik
+    }
+  </script>
+
+</body>
+</html>
