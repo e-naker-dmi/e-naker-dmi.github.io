@@ -1,55 +1,52 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/eNakerUI.css">
-    <title>e-NAKER Dumai</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>e-NAKER-DMI</title>
+  <link rel="stylesheet" href="css/eNakerUI.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <!-- Hero Section -->
-    <section class="hero">
-        <h1>Selamat Datang di e-NAKER Dumai</h1>
-        <p>Digitalisasi Tenaga Kerja Kota Idaman</p>
-    </section>
 
-    <!-- Main Cards Section -->
-    <section class="card-container">
-        <!-- Pencari Kerja Card dengan Redirect ke Modul Pencari Kerja -->
-        <div class="card" onclick="window.location.href='modules/pencari-kerja/index.html'">
-            <img src="assets/icon-pencari-kerja.png" alt="Pencari Kerja">
-            <h2>Pencari Kerja</h2>
-            <p>Registrasi AK1, pembuatan CV, dan peluang kerja</p>
-        </div>
+  <header>
+    <h1>e-NAKER-DMI</h1>
+  </header>
 
-        <!-- Lowongan Kerja Card dengan Redirect -->
-        <div class="card" onclick="window.location.href='modules/lowongan-kerja/index.html'">
-            <img src="assets/icon-lowongan-kerja.png" alt="Lowongan Kerja">
-            <h2>Lowongan Kerja</h2>
-            <p>Input dan verifikasi lowongan kerja dari perusahaan</p>
-        </div>
+  <nav>
+    <button class="home-btn">
+      <i class="fa fa-home"></i> Home
+    </button>
+  </nav>
 
-        <!-- Pelatihan Kerja Card dengan Redirect -->
-        <div class="card" onclick="window.location.href='modules/pelatihan-kerja/index.html'">
-            <img src="assets/icon-pelatihan-kerja.png" alt="Pelatihan Kerja">
-            <h2>Pelatihan Kerja</h2>
-            <p>Jadwal pelatihan, pendaftaran, dan sertifikat digital</p>
-        </div>
+  <div class="card-container">
+    <div class="card">
+      <img src="assets/icon-pencari-kerja.png" alt="Pencari Kerja">
+      <h3>Pencari Kerja</h3>
+      <p>Daftar untuk Kartu Kuning Digital, buat profil dan CV.</p>
+      <a href="modules/pencari-kerja/index.html">Masuk</a>
+    </div>
+    <div class="card">
+      <img src="assets/icon-lowongan-kerja.png" alt="Lowongan Kerja">
+      <h3>Lowongan Kerja</h3>
+      <p>Cari lowongan kerja terbaru yang sesuai dengan keterampilanmu.</p>
+    </div>
+    <div class="card">
+      <img src="assets/icon-pelatihan-kerja.png" alt="Pelatihan Tenaga Kerja">
+      <h3>Pelatihan Tenaga Kerja</h3>
+      <p>Ikuti pelatihan untuk meningkatkan keterampilan kerja.</p>
+    </div>
+    <div class="card">
+      <img src="assets/icon-dashboard.png" alt="Dashboard Pemerintah">
+      <h3>Dashboard Admin</h3>
+      <p>Kelola data dan laporan terkait tenaga kerja.</p>
+    </div>
+  </div>
 
-        <!-- Dashboard Card dengan Redirect -->
-        <div class="card" onclick="window.location.href='modules/dashboard/index.html'">
-            <img src="assets/icon-dashboard.png" alt="Dashboard">
-            <h2>Dashboard</h2>
-            <p>Monitoring kebutuhan tenaga kerja dan analitik</p>
-        </div>
-    </section>
+  <footer>
+    <p>e-Naker Dumai – Digitalisasi Tenaga Kerja Kota Idaman</p>
+  </footer>
 
-    <!-- Footer dengan Breadcrumb dan Tombol Home -->
-    <footer>
-        <nav class="breadcrumb">
-            <a href="#">Beranda</a> > <a href="#">Modul</a>
-        </nav>
-        <button class="home-btn" onclick="window.location.href='index.html'">Home</button>
-    </footer>
+  <script src="js/main.js"></script>
 </body>
 </html>
