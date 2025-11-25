@@ -8,7 +8,7 @@
 /* Body Styling with New Gradient */
 body {
     font-family: 'Roboto', sans-serif;
-    background: linear-gradient(135deg, #003366, #007bff, #17a2b8, #28a745, #ffc107, #003366); /* Gradien biru tua ke biru, biru muda, hijau, kuning, dan kembali ke biru */
+    background: linear-gradient(135deg, #000000, #003366, #17a2b8, #ffc107, #003366, #000000); /* Updated gradient */
     color: #fff;
     padding: 20px;
     text-align: center;
@@ -38,9 +38,9 @@ body {
     flex-wrap: wrap;
 }
 
-/* Card Styling with Gradient */
+/* Card Styling with Updated Gradient */
 .card {
-    background: linear-gradient(135deg, #003366, #007bff, #17a2b8, #28a745, #ffc107, #003366); /* Gradien untuk card: biru tua ke biru, biru muda, hijau, kuning, dan kembali ke biru */
+    background: linear-gradient(135deg, #000000, #003366, #17a2b8, #ffc107, #003366, #000000); /* Updated gradient */
     width: 220px;
     height: 300px;
     margin: 10px;
@@ -57,7 +57,7 @@ body {
 
 .card:hover {
     transform: translateY(-10px);
-    background: linear-gradient(135deg, #003366, #007bff, #17a2b8, #28a745, #ffc107, #003366); /* Hover tetap dengan gradien yang sama */
+    background: linear-gradient(135deg, #000000, #003366, #17a2b8, #ffc107, #003366, #000000); /* Hover with updated gradient */
 }
 
 /* Button Styling */
